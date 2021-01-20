@@ -27,3 +27,6 @@ ext {
 application {
     mainClassName = javaMainClass
 }
+run{
+    standardInput = System.in
+}
