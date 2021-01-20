@@ -45,7 +45,4 @@ public class Player {
         this.score = score;
     }
 
-    public void setScoreGame(int scoreGame) {
-        this.scoreGame = scoreGame;
-    }
 }
