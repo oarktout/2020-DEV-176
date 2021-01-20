@@ -5,6 +5,7 @@ import tennis.kata.model.TennisGame;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class TennisGameController {
 
@@ -74,5 +75,14 @@ public class TennisGameController {
 
     public TennisGame getGame() {
         return game;
+    }
+
+    public String randomWinAPlay(){
+        Random r = new Random();
+        if(r.nextInt(2)==0){
+            return this.winAPlay(this.game.getPlayerOne(), this.game.getPlayerTwo());
+        }else{
+            return this.winAPlay(this.game.getPlayerTwo(), this.game.getPlayerOne());
+        }
     }
 }

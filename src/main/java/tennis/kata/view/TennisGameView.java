@@ -52,4 +52,28 @@ public class TennisGameView {
         play(numberOfGame);
     }
 
+    private void play(int numberOfGame) {
+        Scanner scanner=new Scanner(System.in);
+        while(this.gameController.numberOfGames() < numberOfGame && !this.gameController.hasWinner()) {
+            System.out.println("\n"+this.gameController.randomWinAPlay());
+            displayScore();
+        }
+        System.out.println("replay? (y/n)");
+        String response=scanner.next();
+        if("y".equals(response)){
+            initializeTheGame();
+        }else{
+            launch();
+        }
+    }
+
+    private void displayScore() {
+        System.out.println("Score");
+        System.out.println("=====");
+        System.out.println("Score "+ this.gameController.getPlayerOneName()+": "+this.gameController.getScorePlayerOne());
+        System.out.println("Game :"+this.gameController.getGame().getScoreGamePlayerOne());
+        System.out.println("Score "+ this.gameController.getPlayerTwoName()+": "+this.gameController.getScorePlayerTwo());
+        System.out.println("Game :"+this.gameController.getGame().getScoreGamePlayerTwo());
+    }
+
 }
