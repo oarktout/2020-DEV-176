@@ -41,7 +41,15 @@ public class TennisGameView {
 
 
     private void initializeTheGame() {
-
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter Name Player one :");
+        this.playerOneName=sc.next();
+        System.out.println("Enter Name Player two:");
+        this.playerTwoName=sc.next();
+        this.gameController=new TennisGameController(playerOneName,playerTwoName);
+        System.out.println("How many game you want to play? ");
+        int numberOfGame=sc.nextInt();
+        play(numberOfGame);
     }
 
 }
