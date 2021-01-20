@@ -35,4 +35,25 @@ public class TennisGame {
         return playerTwo.getScore();
     }
 
+    public int getScoreGamePlayerOne(){
+        return playerOne.getScoreGame();
+    }
+
+    public int getScoreGamePlayerTwo(){
+        return playerTwo.getScoreGame();
+    }
+
+    public Player getPlayerOne(){
+        return playerOne;
+    }
+
+    public Player getPlayerTwo(){
+        return playerTwo;
+    }
+
+    public void initializeANewGame(){
+        playerOne.setScore(0);
+        playerTwo.setScore(0);
+    }
+
 }
