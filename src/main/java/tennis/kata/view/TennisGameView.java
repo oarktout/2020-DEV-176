@@ -14,12 +14,11 @@ public class TennisGameView {
 
     public void launch(){
         int choice=menu();
-        switch (choice){
-            case 1:
-                initializeTheGame();
-            default:
-                System.out.println("the choice it's not valid , return to the menu...");
-                launch();
+        if (choice == 1) {
+            initializeTheGame();
+        }else{
+            System.out.println("the choice it's not valid , return to the menu...");
+            launch();
         }
     }
     private static int menu(){
