@@ -11,6 +11,13 @@ class TennisGameTest {
     private Player playerOne;
     private Player playerTwo;
 
+    @BeforeEach
+    void initTennisGame() {
+        playerOne = new Player("p1");
+        playerTwo = new Player("p2");
+        tennisGame = new TennisGame(playerOne, playerTwo);
+    }
+
     @Test
     void whoWinnerPlayerOne() {
         //initialize test
